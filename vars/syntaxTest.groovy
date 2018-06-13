@@ -8,6 +8,7 @@ pipeline {
             {sh '''echo Hello Cray
             env
             echo $APP
+            echo $app
             echo $VERSION
             echo $REPOSITORY'''}
           }
@@ -15,6 +16,7 @@ pipeline {
       }
   environment {
     VERSION = 'MyVersion'
+    app = $APP
     IMAGE_TAG = 'v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}'
   }
  }
