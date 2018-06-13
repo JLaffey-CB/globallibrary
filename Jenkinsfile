@@ -1,5 +1,2 @@
 @Library('syntax') _
-syntaxTest{
-   APP: 'cray'
-   REPOSITORY: 'repo'
-}   
+syntaxTest(cray,repo)   

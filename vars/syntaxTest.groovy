@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def call(syntaxTest){
+def call(String APP, String REPOSITORY){
 pipeline {
     agent { node{label 'centos'}}
       stages {
@@ -7,13 +7,11 @@ pipeline {
           steps { container('centos')
             echo 'Hello Cray'
             echo $APP
-            echo $IMAGE_TAG
+            echo $REPOSITORY
           }
         }
       }
   environment {
-    APP = ''
-    REPOSITORY = ''
     VERSION = 'MyVersion'
     IMAGE_TAG = 'v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}'
   }
