@@ -1,2 +1,2 @@
 @Library('syntax') _
-syntaxTest('MyRepo','A12P:', 'TestApp')
+MapTest(REPOSITORY: 'MyRepo', IMAGE_PREFIX: 'A12P:', APP: 'TestApp')
