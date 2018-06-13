@@ -8,6 +8,7 @@ pipeline {
             {sh '''echo Hello Cray
             echo $app
             echo $VERSION
+            echo $REPOSITORY
             echo $repo
             echo $IMAGE_TAG'''}
           }
