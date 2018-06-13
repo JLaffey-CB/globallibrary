@@ -14,7 +14,7 @@ pipeline {
     string(name: 'APP', defaultValue: '', description: '')
     string(name: 'REPOSITORY', defaultValue: '', description: '')
     string(name: 'VERSION', defaultValue: "MyVersion", description: '')
-    string(name: 'IMAGE_TAG', defaultValue: "v params.VERSION/$REPOSITORY-${BUILD_NUMBER}", description: '')
+    string(name: 'IMAGE_TAG', defaultValue: "v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}", description: '')
   }
  }
 }
