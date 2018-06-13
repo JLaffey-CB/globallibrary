@@ -16,7 +16,7 @@ pipeline {
       }
   environment {
     VERSION = 'MyVersion'
-    app = $APP
+    app = APP
     IMAGE_TAG = 'v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}'
   }
  }
