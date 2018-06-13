@@ -8,14 +8,14 @@ pipeline {
             {sh '''echo Hello Cray
             echo "$(args.APP)"
             echo VERSION
-            echo "${args.REPOSITORY}"
+            echo "$(args.REPOSITORY)"
             echo $IMAGE_TAG'''}
           }
         }
       }
   environment {
     VERSION = '1.7.2'
-    IMAGE_TAG = "v${VERSION}/${args.REPOSITORY}-${BUILD_NUMBER}"
+    IMAGE_TAG = "v${VERSION}/$(args.REPOSITORY)-${BUILD_NUMBER}"
   }
  }
 }
