@@ -6,16 +6,16 @@ pipeline {
         stage('Build') {
           steps { container('centos')
             {sh '''echo Hello Cray
-            echo args.APP
-            echo args.VERSION
-            echo args.REPOSITORY
+            echo ${args.APP}
+            echo VERSION
+            echo ${args.REPOSITORY}
             echo $IMAGE_TAG'''}
           }
         }
       }
   environment {
     VERSION = '1.7.2'
-    IMAGE_TAG = "v${VERSION}/${repo}-${BUILD_NUMBER}"
+    IMAGE_TAG = "v${VERSION}/${args.REPOSITORY}-${BUILD_NUMBER}"
   }
  }
 }
