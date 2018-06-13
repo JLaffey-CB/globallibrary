@@ -18,7 +18,7 @@ pipeline {
     image = "$IMAGE_PREFIX"
     app = "$APP"
     VERSION = 'MyVersion'
-    IMAGE_TAG = 'v' + $VERSION + '/' $REPOSITORY + '-' $BUILD_NUMBER
+    IMAGE_TAG = 'v' + $VERSION + '/' $repo + '-' $BUILD_NUMBER
   }
  }
 }
