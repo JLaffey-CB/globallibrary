@@ -10,11 +10,12 @@ pipeline {
             echo $APP
             echo $app
             echo $VERSION
-            echo $REPOSITORY'''}
+            echo $repo'''}
           }
         }
       }
   environment {
+    repo = "$REPOSITORY"
     VERSION = 'MyVersion'
     app = "$APP"
     IMAGE_TAG = 'v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}'
