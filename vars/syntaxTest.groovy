@@ -2,14 +2,15 @@
 def call(syntaxTest){
 pipeline {
     agent { node{label 'centos'}}
-    stages {
-    stage('Build') {
-            steps { container('centos')
-      echo $APP
-      echo $IMAGE_TAG
+      stages {
+        stage('Build') {
+          steps { container('centos')
+            echo 'Hello Cray'
+            echo $APP
+            echo $IMAGE_TAG
+          }
+        }
       }
-    }
-  }
   parameters {
     string(name: 'APP', defaultValue: '', description: '')
     string(name: 'REPOSITORY', defaultValue: '', description: '')
