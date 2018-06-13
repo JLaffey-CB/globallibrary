@@ -15,7 +15,7 @@ pipeline {
       }
   environment {
     VERSION = '1.7.2'
-    IMAGE_TAG = "v${VERSION}/$(args.REPOSITORY)-${BUILD_NUMBER}"
+    IMAGE_TAG = "v${VERSION}/${args.REPOSITORY}-${BUILD_NUMBER}"
   }
  }
 }
