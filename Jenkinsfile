@@ -1,2 +1,2 @@
 @Library('syntax') _
-syntaxTest('MyRepo','A12P:', TestApp)
+syntaxTest('MyRepo','A12P:', 'TestApp')
