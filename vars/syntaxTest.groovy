@@ -11,11 +11,11 @@ pipeline {
           }
         }
       }
-  parameters {
-    string(name: 'APP', defaultValue: '', description: '')
-    string(name: 'REPOSITORY', defaultValue: '', description: '')
-    string(name: 'VERSION', defaultValue: "MyVersion", description: '')
-    string(name: 'IMAGE_TAG', defaultValue: "v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}", description: '')
+  environment {
+    APP = ''
+    REPOSITORY = ''
+    VERSION = 'MyVersion'
+    IMAGE_TAG = 'v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}'
   }
  }
 }
