@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
           steps { container('centos')
             {sh '''echo Hello Cray
-          //  echo ${args.APP}
+            echo "${args.APP}"
             echo VERSION
             echo "${args.REPOSITORY}"
             echo $IMAGE_TAG'''}
