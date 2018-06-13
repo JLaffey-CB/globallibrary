@@ -1,23 +1,23 @@
 #!/usr/bin/env groovy
-def call(String APP, String REPOSITORY){
+def call(String REPOSITORY, String IMAGE_PREFIX, String APP){
 pipeline {
     agent { node{label 'centos'}}
       stages {
         stage('Build') {
           steps { container('centos')
             {sh '''echo Hello Cray
-            env
-            echo $APP
             echo $app
             echo $VERSION
-            echo $repo'''}
+            echo $repo
+            echo $IMAGE_TAG'''}
           }
         }
       }
   environment {
     repo = "$REPOSITORY"
-    VERSION = 'MyVersion'
+    image = "$IMAGE_PREFIX"
     app = "$APP"
+    VERSION = 'MyVersion'
     IMAGE_TAG = 'v params.VERSION/params.REPOSITORY-${BUILD_NUMBER}'
   }
  }
