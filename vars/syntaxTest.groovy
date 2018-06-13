@@ -5,8 +5,8 @@ pipeline {
     stages {
     stage('Build') {
             steps { container('centos')
-      {echo $APP}
-      {echo $IMAGE_TAG}
+      echo $APP
+      echo $IMAGE_TAG
       }
     }
   }
