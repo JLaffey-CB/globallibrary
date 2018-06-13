@@ -5,9 +5,9 @@ pipeline {
       stages {
         stage('Build') {
           steps { container('centos')
-            echo 'Hello Cray'
+            {sh '''echo Hello Cray
             echo $APP
-            echo $REPOSITORY
+            echo $REPOSITORY'''}
           }
         }
       }
