@@ -14,9 +14,6 @@ pipeline {
         }
       }
   environment {
-    repo = "$REPOSITORY"
-    image = "$IMAGE_PREFIX"
-    app = "$APP"
     VERSION = '1.7.2'
     IMAGE_TAG = "v${VERSION}/${repo}-${BUILD_NUMBER}"
   }
