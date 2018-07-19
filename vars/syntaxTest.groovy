@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def call(String REPOSITORY, String IMAGE_PREFIX, String APP){
 pipeline {
-    agent { node{label 'centos'}}
+    agent { node{label 'centos-7'}}
       stages {
         stage('Build') {
           steps { container('centos')
