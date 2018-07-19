@@ -4,7 +4,7 @@ pipeline {
     agent { node{label 'centos-7'}}
       stages {
         stage('Build') {
-          steps { container('centos')
+          steps {step)
             {sh '''echo Hello Cray
             echo $app
             echo $VERSION
