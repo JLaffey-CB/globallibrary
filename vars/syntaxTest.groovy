@@ -5,7 +5,7 @@ pipeline {
       stages {
         stage('Build') {
             steps { 
-            sh '''echo Hello Cray
+            sh '''echo Hello Simpli.Fi
             echo $app
             echo $VERSION
             echo $repo
