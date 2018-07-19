@@ -21,4 +21,3 @@ pipeline {
     IMAGE_TAG = "v${VERSION}/${repo}-${BUILD_NUMBER}"
   }
  }
-}
