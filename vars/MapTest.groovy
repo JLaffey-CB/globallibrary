@@ -5,7 +5,7 @@ pipeline {
       stages {
         stage('Build') {
           steps { container('centos')
-            {sh '''echo Hello Cray
+            {sh '''echo Hello Simpli.fi
             echo $(args.APP)
             echo $VERSION
             echo "${args.REPOSITORY}"
